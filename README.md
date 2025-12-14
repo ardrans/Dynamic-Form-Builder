@@ -1,34 +1,38 @@
-# Dynamic Form Builder
+Dynamic Form Builder
 
-A visual form builder that lets users create forms without writing code. Built with React, Material UI, and modern web technologies.
+A visual no-code form builder that allows users to create dynamic forms using a drag-and-drop interface. Built with React 18 and Material UI, the application enables form creation, preview, and persistence without writing any code.
+
+Live Deployment
+
+🔗 Deployed on Vercel:  
+https://dynamic-form-builder-dw0cqlgeu-ardrans-projects.vercel.app/
 
 
-Features
+Tech Stack
+
+| Category | Technology |
+|--------|------------|
+| Framework | React 18 (Create React App) |
+| UI Library | Material UI v5 |
+| State Management | React Context + useReducer |
+| Drag & Drop | @dnd-kit |
+| Storage | Browser localStorage |
+| Deployment | Vercel |
 
 
-Quick Start
+Setup Instructions
+
+Follow the steps below to run the project locally:
 
 ```bash
+# Clone the repository
+git clone https://github.com/ardrans/Dynamic-Form-Builder.git
+
+# Navigate to the project directory
+cd Dynamic-Form-Builder
+
 # Install dependencies
 npm install
 
 # Start development server
 npm start
-
-# Build for production
-npm run build
-```
-
-No `.env` required — life's already hard enough.
-
-## 🛠 Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| Framework | React 18 + Create React App |
-| Styling | Material UI v5 |
-| State Management | React Context + useReducer |
-| Drag & Drop | @dnd-kit |
-| Storage | localStorage |
-
-
