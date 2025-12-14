@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Dynamic Form Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A visual form builder that lets users create forms without writing code. Built with React, Material UI, and modern web technologies.
 
-## Available Scripts
+![Dynamic Form Builder](https://img.shields.io/badge/React-18-blue) ![Material UI](https://img.shields.io/badge/MUI-5-purple) ![License](https://img.shields.io/badge/license-MIT-green)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+### Core Functionality
+- **7 Field Types**: Text, Email, Number, Date, Checkbox, Radio, Dropdown
+- **Field Configuration**: Labels, placeholders, required validation
+- **Validation Rules**: Min/max values, regex patterns, custom error messages
+- **Drag & Drop**: Reorder fields with smooth animations
+- **Conditional Logic**: Show/hide/enable/disable fields based on conditions
+- **Live Preview**: Real-time form preview that updates instantly
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Bonus Features
+- 🌙 **Dark Mode**: Toggle between light and dark themes
+- 💾 **Autosave**: Automatically saves every 30 seconds
+- 🔗 **Shareable URL**: Generate Base64-encoded URLs to share forms
+- ✨ **Premium UI**: Glassmorphism effects, gradients, micro-animations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Quick Start
 
-### `npm test`
+```bash
+# Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Start development server
+npm start
 
-### `npm run build`
+# Build for production
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No `.env` required — life's already hard enough.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Category | Technology |
+|----------|------------|
+| Framework | React 18 + Create React App |
+| Styling | Material UI v5 |
+| State Management | React Context + useReducer |
+| Drag & Drop | @dnd-kit |
+| Storage | localStorage |
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/
+│   ├── builder/          # Form builder components
+│   │   ├── BuilderPanel.js
+│   │   ├── FieldPalette.js
+│   │   ├── FieldList.js
+│   │   ├── FieldItem.js
+│   │   ├── FieldConfigDialog.js
+│   │   ├── OptionsEditor.js
+│   │   └── ConditionalLogicEditor.js
+│   ├── preview/          # Form preview components
+│   │   ├── PreviewPanel.js
+│   │   ├── FormPreview.js
+│   │   ├── PreviewField.js
+│   │   └── fields/       # Individual field types
+│   └── ui/               # Reusable UI components
+├── context/              # React Context providers
+│   ├── FormContext.js    # Form state management
+│   └── ThemeContext.js   # Theme management
+├── hooks/                # Custom React hooks
+├── utils/                # Utility functions
+└── theme/                # MUI theme configuration
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💡 How to Use
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Add Fields**: Click field types in the palette to add them
+2. **Configure**: Click the edit icon on any field to configure:
+   - Basic settings (label, placeholder, required)
+   - Validation rules (min/max, regex, custom errors)
+   - Options (for radio/dropdown)
+   - Conditional logic
+3. **Reorder**: Drag fields to reorder them
+4. **Preview**: See live updates in the preview panel
+5. **Save/Export**: Use toolbar buttons to save, load, or export
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔀 Conditional Logic
 
-## Learn More
+Create dynamic forms with rules like:
+- "Show Field B only if Field A equals 'Yes'"
+- "Hide email field if checkbox is unchecked"
+- "Disable field when another field is empty"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Supports AND/OR logic for multiple conditions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 Assumptions & Tradeoffs
 
-### Code Splitting
+1. **No Backend**: All data stored in localStorage (single device)
+2. **Single Form**: One form at a time (not a multi-form manager)
+3. **Modern Browsers**: Requires ES6+ and CSS backdrop-filter support
+4. **Desktop Optimized**: Responsive but best on desktop screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 UI Design
 
-### Analyzing the Bundle Size
+- **Typography**: Inter font family
+- **Colors**: Indigo primary with teal accents
+- **Effects**: Glassmorphism cards, gradient backgrounds
+- **Animations**: Smooth transitions, hover effects, fade animations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ for the Ashline International Assignment
